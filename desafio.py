@@ -64,3 +64,19 @@ def div_sum(arr, k):
             if (element1+element2) % k==0:
                 result += 1
     return result
+
+
+if __name__ == '__main__':
+    a = 1
+    print(f'''
+    Problema 1:
+        12:00:00AM -> {time_converter("12:00:00AM")}
+    
+    Problema 2:
+        1 2 3
+        4 5 6 -> {diagonals_diff([[1,2,3],[4,5,6],[9,8,9]])}
+        9 8 9
+
+    Problema 3:
+        (ar=[1, 2, 3, 4, 5, 6], k=5) -> {div_sum([1, 2, 3, 4, 5, 6], 5)}
+    ''')
