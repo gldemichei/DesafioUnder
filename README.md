@@ -2,7 +2,7 @@
 Problemas propostos pela Under como parte de processo seletivo.
 
 # Requisitos
-Python 3.x
+\>= Python 3.6
 
 # Execução
 Para executar os exemplos apesentados no enunciados (com impressão dos resultados):
