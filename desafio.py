@@ -14,4 +14,23 @@ def time_converter(time_AMPM) -> str:
         hh = int(hh)+12
     return str(hh) + mm_ss
 
-def 
+def diagonals_diff(matrix):
+    """Calcula a diferença absoluta entre a diagonal principal e a secundária de uma matriz quadrada
+
+    Args:
+        matrix ([[int]]): Matriz quadrada de números inteiros
+
+    Returns:
+        int: diferença absoluta entre diagonal principal e secundária da matriz
+    """
+    diag1 = []
+    diag2 = []
+    for i, line in enumerate(matrix):
+        for j, element in enumerate(line):
+            if i==j:
+                diag1.append(element)
+            if (i+j) == (len(line)-1):
+                diag2.append(element)
+    return abs(sum(diag1) - sum(diag2))
+
+print(diagonals_diff([[1,2,3],[4,5,6],[9,8,9]]))
