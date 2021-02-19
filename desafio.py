@@ -8,11 +8,18 @@ def time_converter(time_AMPM) -> str:
     Returns:
         str: horário no formato 24h (hh:mm:ss)
     """
-    hh = time_AMPM[:2]
-    mm_ss = time_AMPM[2:-2]
-    if time_AMPM[-2:] == "PM":
+    hh, mm, ss = time_AMPM.split(":")
+    hh = int(hh)
+    mm = int(mm)
+    ss = int(ss[:-2])
+    am_pm = time_AMPM[-2:]
+    
+    if am_pm == "PM":
         hh = int(hh)+12
-    return str(hh) + mm_ss
+    if hh == 24 or hh == 12:  #corrige se meia noite ou meio dia
+        hh -= 12
+
+    return f'{str(hh).rjust(2, "0")}:{str(mm).rjust(2, "0")}:{str(ss).rjust(2, "0")}'
 
 
 # Problema 2
