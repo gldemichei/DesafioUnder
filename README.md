@@ -5,7 +5,7 @@ Problemas propostos pela Under como parte de processo seletivo.
 \>= Python 3.6
 
 # Execução
-Para executar os exemplos apesentados no enunciados (com impressão dos resultados):
+Para executar os exemplos apesentados nos enunciados (com impressão dos resultados):
 > python3 desafio.py
 
 Para executar os testes unitários:
